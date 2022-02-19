@@ -1,9 +1,3 @@
-
-@extends('layout')
-
-@section('mainContent')
-
-
     <br>
     <a href="{{route('users.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create Userssss</a>
     <br>
@@ -35,9 +29,9 @@
         @endforeach
         </tbody>
     </table>
-@endsection
 
-@section('script')
+
+@section('datatablescript')
 <script>
     @parent
     $(document).ready(function() {
