@@ -5,16 +5,16 @@
 
 
     <br>
-    <a href="{{route('users.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create User</a>
+    <a href="{{route('users.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create Userssss</a>
     <br>
     <table id="mytable" class="table table-bordered" style="text-align: center">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>User Name</th>
+            <th>U-ID</th>
+            <th>U-Name</th>
             <th>View</th>
             <th>Edit</th>
-            <th>del</th>
+            <th>Del</th>
         </tr>
         </thead>
         <tbody>

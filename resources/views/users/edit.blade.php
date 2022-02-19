@@ -7,16 +7,16 @@
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label for="exampleInputEmail1">User Name</label>
+            <label for="exampleInputEmail1">U-Name</label>
             <input type="text" value="{{ old('name',$user->name) }}" name="name" class="form-control" placeholder="user name" >
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
+            <label for="exampleInputPassword1">U-Email</label>
             <input type="email" name="email" value="{{old('email',$user->email) }}" class="form-control" placeholder="user email" >
         </div>
 
         <div class="form-group">
-            <label for="UserRole">User Roles</label>
+            <label for="UserRole">U-Roles</label>
             <p class="text-muted">Please select the User Role </p>
 
             @foreach($rolls as $roll)
