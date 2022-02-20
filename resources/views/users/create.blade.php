@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('mmainContent')
+@section('mainContent')
 
     <br>
 
@@ -9,7 +9,7 @@
         @csrf
         <div class="form-group">
             <label for="exampleInputEmail1">User name</label>
-            <input type="text" name="name" value="{{old('name')}}" class="form-control" placeholder="User Name" >
+            <input type="text" name="name" value="{{old('name')}}" class="form-control" placeholder="User Name">
             <span style="color: red">
                         @if ($errors->has('name'))
                     {{ $errors->first('name') }}
