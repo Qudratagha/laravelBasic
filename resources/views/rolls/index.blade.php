@@ -8,7 +8,7 @@
     <table id="mytable" class="table table-bordered" style="text-align: center">
         <thead>
         <tr>
-            <th>ID</th>
+            <th>Roll ID</th>
             <th>Roll Name</th>
             <th>Roll Desc</th>
             <th>Edit</th>
