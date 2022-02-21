@@ -1,16 +1,17 @@
-
-@extends('layout')
+@extends('layouts.app')
 
 @section('mainContent')
     <br>
     <a href="{{route('category.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create Category</a>
     <br>
-    <table class="table table-bordered table-dark" style="text-align: center">
+    <table id="mytable" class="table table-bordered" style="text-align: center">
         <thead>
         <tr>
             <th>C_Id</th>
             <th>Category Name</th>
             <th>User_Id</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -20,7 +21,7 @@
                 <td>{{$category->categoryName}}</td>
                 <td>{{$category->createdByUserID}}</td>
                 <td><a href="{{route('category.edit',$category->categoryID)}}" class="btn btn-success">Edit</a></td>
-{{--                <td><a href="{{route('cars.edit',$user->id)}}" class="btn btn-success">Edit</a></td>--}}
+                {{--                <td><a href="{{route('cars.edit',$user->id)}}" class="btn btn-success">Edit</a></td>--}}
                 <td>
                     <form action="{{route('category.destroy', $category->categoryID)}}" method="POST">
                         @csrf
@@ -28,8 +29,17 @@
                         <button class="btn btn-danger" onclick="return confirm('Are you sure?')" >Dlt</button>
                     </form>
                 </td>
-{{--            </tr>--}}
+            {{--            </tr>--}}
         @endforeach
         </tbody>
-    </table>
+
+@endsection
+@section('datatablescript')
+    <script>
+        @parent
+        $(document).ready(function() {
+            $('#mytable').DataTable( {
+            });
+        });
+    </script>
 @endsection

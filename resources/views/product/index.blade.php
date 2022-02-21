@@ -1,5 +1,4 @@
-
-@extends('layout')
+@extends('layouts.app')
 
 @section('mainContent')
     <br>
@@ -32,13 +31,13 @@
                         <button class="btn btn-danger" onclick="return confirm('Are you sure?')" >Dlt</button>
                     </form>
                 </td>
-{{--                        </tr>--}}
+            {{--                        </tr>--}}
         @endforeach
         </tbody>
     </table>
 
 @endsection
-@section('script')
+@section('datatablescript')
     <script>
         @parent
         $(document).ready(function() {

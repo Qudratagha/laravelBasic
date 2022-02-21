@@ -1,5 +1,5 @@
 
-@extends('layout')
+@extends('layouts.app')
 
 @section('mainContent')
     <br>
@@ -10,7 +10,7 @@
             <label for="exampleInputEmail1">Category name</label>
             <input type="text" value="{{$product->product}}" name="product" class="form-control" placeholder="user name">
         </div>
-        <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure to update it')">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
 

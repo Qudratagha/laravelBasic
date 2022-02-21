@@ -1,8 +1,5 @@
-
-@extends('layout')
-
+@extends('layouts.app')
 @section('mainContent')
-
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
@@ -17,10 +14,8 @@
                                 <dd>{{$product->categoryID}}</dd>
                                 <dt>Product Name: </dt>
                                 <dd>{{$product->product}}</dd>
-
                                 <dt>Product Created Date: </dt>
                                 <dd>{{$product->dateCreated}}</dd>
-
                                 <dt>Product-User ID: </dt>
                                 <dd>{{$product->createdByUserID}}</dd>
                             </dl>
@@ -30,9 +25,5 @@
             </div>
         </div>
     </div>
-
-
-
-
 @endsection
 

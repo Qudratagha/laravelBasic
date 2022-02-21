@@ -27,7 +27,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">User Password</label>
-            <input type="text" name="password" class="form-control" placeholder="password" >
+            <input type="password" name="password" class="form-control" placeholder="password" >
             <span style="color: red">
                         @if ($errors->has('password'))
                     {{ $errors->first('password') }}
@@ -37,7 +37,7 @@
 
         <div class="form-group">
             <label for="exampleInputPassword1">Conform Password</label>
-            <input type="text" name="confirm_password" class="form-control" placeholder="password" >
+            <input type="password" name="confirm_password" class="form-control" placeholder="password" >
             <span style="color: red">
                         @if ($errors->has('password'))
                     {{ $errors->first('password') }}
