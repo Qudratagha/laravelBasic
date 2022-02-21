@@ -1,4 +1,7 @@
 
+@extends('layouts.app')
+
+@section('mainContent')
     <br>
     <a href="{{route('users.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create User</a>
     <br>
@@ -30,7 +33,7 @@
         @endforeach
         </tbody>
     </table>
-
+    @endsection
 @section('datatablescript')
 <script>
     @parent
