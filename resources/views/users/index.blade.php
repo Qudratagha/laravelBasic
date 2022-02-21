@@ -1,8 +1,6 @@
-@extends('layouts.app')
 
-@section('mainContent')
     <br>
-    <a href="{{route('users.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create Userssss</a>
+    <a href="{{route('users.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create User</a>
     <br>
     <table id="mytable" class="table table-bordered" style="text-align: center">
         <thead>
@@ -33,7 +31,6 @@
         </tbody>
     </table>
 
-@endsection
 @section('datatablescript')
 <script>
     @parent
