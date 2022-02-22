@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UserEditRequest;
+use App\Models\Category;
 use App\Models\Rolls;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -56,26 +57,21 @@ class UserController extends Controller
     }
     public function destroy(User $user)
     {
-//        foreach ($user->categories() as $category )
-//        {
-//            if ($category->products()) {
-//                $category->products()->delete();
-//            }
-//        }
         if ($user->products()->first()) {
-            $user->products()->delete();
+           $user->products()->delete();
         }
 
-        if ($user->categories()->first()) {
-            $user->categories()->delete();
+//        $user_categories = $user->categories;
+//        if (!$user_categories->isEmpty()) {
+
+            if ($user->categories()->first()) {
+            foreach ($user->categories as $category)
+            {
+                $category->load('products');
+                $category->products()->delete();
+            }
         }
-
-        foreach ($user->categories() as $category)
-        if ($category) {
-            $user->categories()->delete();
-        }
-
-
+        $user->categories()->delete();
         $user->delete();
         return redirect(route('users.index'));
     }

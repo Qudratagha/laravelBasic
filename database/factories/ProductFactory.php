@@ -15,7 +15,7 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'categoryID' => $this->faker->numberBetween($min = 1, $max = 5),
+            'categoryID' => $this->faker->numberBetween($min = 1, $max = 10),
             'product' => $this->faker->name(),
             'dateCreated' => $this->faker->date($format = 'Y-m-d', $max = 'now'),
             'createdByUserID' => $this->faker->numberBetween($min = 1, $max = 5)

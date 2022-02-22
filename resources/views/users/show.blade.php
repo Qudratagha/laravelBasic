@@ -30,6 +30,7 @@
             </div>
         </div>
     </div>
-    <a href="{{ url()->previous() }}" class="btn btn-default">Back</a>
+    <br>
+    <a href="{{ url()->previous() }}" class="btn btn-success">Back</a>
 @endsection
 
