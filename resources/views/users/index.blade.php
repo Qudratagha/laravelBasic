@@ -1,18 +1,15 @@
-
 @extends('layouts.app')
-
 @section('mainContent')
-    <br>
     <a href="{{route('users.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create User</a>
     <br>
     <table id="mytable" class="table table-bordered" style="text-align: center">
         <thead>
         <tr>
-            <th>U-ID</th>
-            <th>U-Name</th>
+            <th>User-ID</th>
+            <th>User-Name</th>
             <th>View</th>
             <th>Edit</th>
-            <th>Del</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>

@@ -1,10 +1,5 @@
-
 @extends('layouts.app')
-
 @section('mainContent')
-
-    <br>
-
     <form class="form-horizontal" method="post" action="{{route('users.store')}}">
         @csrf
         <div class="form-group">

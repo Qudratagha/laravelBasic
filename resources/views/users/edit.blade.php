@@ -2,7 +2,6 @@
 @extends('layouts.app')
 
 @section('mainContent')
-    <br>
     <form class="form-horizontal" method="post" action="{{route('users.update',$user->id)}}">
         @csrf
         @method('PUT')
@@ -28,9 +27,7 @@
                 <br>
             @endforeach
         </div>
-
         <button type="submit" class="btn btn-primary">Submit</button>
-
     </form>
 
     @if (count($errors) > 0)
@@ -42,6 +39,7 @@
             </ul>
         </div>
     @endif
+    <br>
     <a href="{{ url()->previous() }}" class="btn btn-danger">Back</a>
 
 

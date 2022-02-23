@@ -1,15 +1,12 @@
 @extends('layouts.app')
 
 @section('mainContent')
-    <br>
     <a href="{{route('product.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create Product</a>
-    <br>
     <table id="mytable" class="table table-bordered" style="text-align: center">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>Product Name</th>
-
+            <th>Product-ID</th>
+            <th>Product-Name</th>
             <th>View</th>
             <th>Edit</th>
             <th>Delete</th>
