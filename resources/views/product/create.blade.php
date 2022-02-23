@@ -22,6 +22,10 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+	
+	    <br>
+    <a href="{{ url()->previous() }}" class="btn btn-outline-danger">Back</a>
+
 
 
 

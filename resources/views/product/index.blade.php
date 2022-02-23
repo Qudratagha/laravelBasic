@@ -31,10 +31,11 @@
                         <button class="btn btn-danger" onclick="return confirm('Are you sure?')" >Dlt</button>
                     </form>
                 </td>
-            {{--                        </tr>--}}
+            </tr>
         @endforeach
         </tbody>
     </table>
+	
 
 @endsection
 @section('datatablescript')

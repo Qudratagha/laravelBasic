@@ -25,5 +25,8 @@
             </div>
         </div>
     </div>
+	    <br>
+    <a href="{{ url()->previous() }}" class="btn btn-outline-danger">Back</a>
+
 @endsection
 
