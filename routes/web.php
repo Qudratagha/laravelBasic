@@ -31,3 +31,7 @@ Route::resource('/rolls', RollsController::class);
 //Route::get('students/list', [StudentController::class, 'getStudents'])->name('students.list');
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
