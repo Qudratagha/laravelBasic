@@ -12,6 +12,7 @@ use Illuminate\Session\Store;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Session;
 use function Psr\Log\alert;
 
 class UserController extends Controller
@@ -53,17 +54,12 @@ class UserController extends Controller
         $user->rolls()->attach($request->get('roll'));
         $request->session()->flash('message','User Updated SuccessFully');
         return redirect(route('users.index'));
-
     }
     public function destroy(User $user)
     {
         if ($user->products()->first()) {
            $user->products()->delete();
         }
-
-//        $user_categories = $user->categories;
-//        if (!$user_categories->isEmpty()) {
-
             if ($user->categories()->first()) {
             foreach ($user->categories as $category)
             {
@@ -74,5 +70,6 @@ class UserController extends Controller
         $user->categories()->delete();
         $user->delete();
         return redirect(route('users.index'));
+
     }
 }

@@ -21,7 +21,6 @@
                 <td>{{$category->categoryName}}</td>
                 <td>{{$category->createdByUserID}}</td>
                 <td><a href="{{route('category.edit',$category->categoryID)}}" class="btn btn-success">Edit</a></td>
-                {{--                <td><a href="{{route('cars.edit',$user->id)}}" class="btn btn-success">Edit</a></td>--}}
                 <td>
                     <form action="{{route('category.destroy', $category->categoryID)}}" method="POST">
                         @csrf

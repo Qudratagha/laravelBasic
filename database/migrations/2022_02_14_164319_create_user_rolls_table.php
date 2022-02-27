@@ -14,12 +14,12 @@ class CreateUserRollsTable extends Migration
     public function up()
     {
         Schema::create('user_rolls', function (Blueprint $table) {
-            $table->id();
+            $table->id('ur_id');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('user_id')->on('users');
 
             $table->unsignedBigInteger('roll_id');
-            $table->foreign('roll_id')->references('id')->on('rolls');
+            $table->foreign('roll_id')->references('roll_id')->on('rolls');
 
 
             $table->timestamps();

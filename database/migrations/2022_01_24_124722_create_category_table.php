@@ -17,9 +17,9 @@ class CreateCategoryTable extends Migration
             $table->id('categoryID');
             $table->string('categoryName');
             $table->dateTime('dateCreated');
-            $table->unsignedBigInteger('createdByUserID');
+            $table->unsignedBigInteger('user_id');
 
-            $table->foreign('createdByUserID')->references('id')->on('users');
+            $table->foreign('user_id')->references('user_id')->on('users');
 
         });
     }

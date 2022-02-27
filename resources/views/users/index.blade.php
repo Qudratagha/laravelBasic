@@ -2,6 +2,11 @@
 @section('mainContent')
     <a href="{{route('users.create')}}" class="btn btn-primary " style="margin-bottom: 20px">Create User</a>
     <br>
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
     <table id="mytable" class="table table-bordered" style="text-align: center">
         <thead>
         <tr>

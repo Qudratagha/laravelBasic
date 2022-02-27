@@ -18,11 +18,11 @@ class CreateProductTable extends Migration
             $table->unsignedBigInteger('categoryID');
             $table->string('product');
             $table->dateTime('dateCreated');
-            $table->unsignedBigInteger('createdByUserID');
+            $table->unsignedBigInteger('user_id');
 
             $table->foreign('categoryID')->references('categoryID')->on('category');
 
-            $table->foreign('createdByUserID')->references('id')->on('users');
+            $table->foreign('user_id')->references('user_id')->on('users');
 
         });
     }

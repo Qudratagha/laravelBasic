@@ -39,6 +39,7 @@
             </ul>
         </div>
     @endif
+
     <br>
     <a href="{{ url()->previous() }}" class="btn btn-danger">Back</a>
 

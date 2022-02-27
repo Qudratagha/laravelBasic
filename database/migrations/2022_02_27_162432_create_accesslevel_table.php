@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRollsTable extends Migration
+class CreateAccesslevelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateRollsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rolls', function (Blueprint $table) {
-            $table->id('roll_id');
-            $table->string('rollName');
-            $table->string('rollDesc');
-            $table->timestamps();
+        Schema::table('accesslevel', function (Blueprint $table) {
+            $table->id('al_id');
+            $table->string('al_name');
         });
     }
 
@@ -28,6 +26,8 @@ class CreateRollsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rolls');
+        Schema::table('accesslevel', function (Blueprint $table) {
+            //
+        });
     }
 }
