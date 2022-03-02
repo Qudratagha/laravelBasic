@@ -13,21 +13,13 @@ class CreateAccesslevelTable extends Migration
      */
     public function up()
     {
-        Schema::table('accesslevel', function (Blueprint $table) {
+        Schema::create('accesslevel', function (Blueprint $table) {
             $table->id('al_id');
             $table->string('al_name');
         });
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        Schema::table('accesslevel', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('accesslevel');
     }
 }

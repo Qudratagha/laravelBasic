@@ -13,21 +13,13 @@ class CreateModulesTable extends Migration
      */
     public function up()
     {
-        Schema::table('modules', function (Blueprint $table) {
+        Schema::create('modules', function (Blueprint $table) {
             $table->id('m_id');
             $table->string('m_name');
         });
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        Schema::table('modules', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('modules');
     }
 }

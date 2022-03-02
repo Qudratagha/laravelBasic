@@ -13,26 +13,17 @@ class CreatePriviligesTable extends Migration
      */
     public function up()
     {
-        Schema::table('priviliges', function (Blueprint $table) {
+        Schema::create('priviliges', function (Blueprint $table) {
             $table->id('pri_id');
             $table->unsignedBigInteger('m_id');
             $table->foreign('m_id')->references('m_id')->on('modules');
 
             $table->unsignedBigInteger('al_id');
             $table->foreign('al_id')->references('al_id')->on('accesslevel');
-
         });
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        Schema::table('priviliges', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('priviliges');
     }
 }

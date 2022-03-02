@@ -24,10 +24,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     public function categories(){
-        return $this->hasMany(Category::class,'createdByUserID','id');
+        return $this->hasMany(Category::class,'user_id','user_id');
     }
     public function products(){
-        return $this->hasMany(Product::class,'createdByUserID','id');
+        return $this->hasMany(Product::class,'user_id','user_id');
     }
 
     public function rolls(){

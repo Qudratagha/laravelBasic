@@ -16,12 +16,12 @@ class Category extends Model
 
     protected $fillable = [
         'categoryName',
-        'createdByUserID',
+        'user_id',
         'dateCreated',
     ];
 
     public function user(){
-        return $this->belongsTo(User::class,'createdByUserID','id');
+        return $this->belongsTo(User::class,'user_id','user_id');
     }
 
     public function products(){
