@@ -12,6 +12,7 @@ class User extends Authenticatable
     protected $primaryKey = 'id';
     public $timestamp = 'false';
     protected $fillable = [
+        'user_id',
         'name',
         'email',
         'password',

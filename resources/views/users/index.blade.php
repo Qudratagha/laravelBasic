@@ -20,12 +20,12 @@
         <tbody>
         @foreach($users as $user)
             <tr>
-                <td>{{$user->id}}</td>
+                <td>{{$user->user_id}}</td>
                 <td>{{$user->name}}</td>
-                <td><a href="{{route('users.show',$user->id)}}" class="btn btn-success">View</a></td>
-                <td><a href="{{route('users.edit',$user->id)}}" class="btn btn-success">Edit</a></td>
+                <td><a href="{{route('users.show',$user->user_id)}}" class="btn btn-success">View</a></td>
+                <td><a href="{{route('users.edit',$user->User_id)}}" class="btn btn-success">Edit</a></td>
                 <td>
-                    <form action="{{route('users.destroy', $user->id)}}" method="POST">
+                    <form action="{{route('users.destroy', $user->User_id)}}" method="POST">
                         @csrf
                         @method("DELETE")
                         <button class="btn btn-danger" onclick="return confirm('Are you sure?')" >Dlt</button>
