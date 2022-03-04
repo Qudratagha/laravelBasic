@@ -1,5 +1,5 @@
 
-@extends('layout')
+@extends('layouts.app')
 
 @section('mainContent')
 
@@ -33,6 +33,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <a href="{{ url()->previous() }}" class="btn btn-outline-danger">Back</a>
 
 
 

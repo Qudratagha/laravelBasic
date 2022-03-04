@@ -17,7 +17,7 @@
                                 <dt>Product Created Date: </dt>
                                 <dd>{{$product->dateCreated}}</dd>
                                 <dt>Product-User ID: </dt>
-                                <dd>{{$product->createdByUserID}}</dd>
+                                <dd>{{$product->user_id}}</dd>
                             </dl>
                         </div>
                     </div>

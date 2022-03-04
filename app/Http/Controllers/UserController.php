@@ -20,7 +20,7 @@ class UserController extends Controller
     public function index()
     {
 
-       dd( $users = User::first());
+       $users = User::all();
         return view('users.index',compact('users'));
     }
 
@@ -41,7 +41,9 @@ class UserController extends Controller
     }
     public function show(User $user)
     {
-        return view('users.show',compact('user'));
+        $rolls = Rolls::all();
+        $user = User::();
+        return view('users.show',compact('user','rolls'));
     }
     public function edit(User $user)
     {
