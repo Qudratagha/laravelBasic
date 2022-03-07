@@ -14,10 +14,11 @@ class RollSeeder extends Seeder
      */
     public function run()
     {
-        $arr = ['admin','super admin', 'DEO'];
-        foreach ($arr as $ar)
-        {
-            DB::table('rolls')->insert(['rollName' => $ar, 'rollDesc' => "testing"]  );
-        }
+//        $arr = ['admin','super admin', 'DEO'];
+//        foreach ($arr as $ar)
+//        {
+//            DB::table('rolls')->insert(['rollName' => $ar, 'rollDesc' => "testing"]  );
+//        }
+        \App\Models\Rolls::factory()->times(5)->create();
     }
 }
