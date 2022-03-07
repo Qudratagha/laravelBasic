@@ -10,7 +10,7 @@
     <table id="mytable" class="table table-bordered" style="text-align: center">
         <thead>
         <tr>
-            <th>User ID</th>
+            <th>User-ID</th>
             <th>User-Name</th>
             <th>View</th>
             <th>Edit</th>

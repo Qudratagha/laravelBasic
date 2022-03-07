@@ -42,7 +42,6 @@ class UserController extends Controller
     public function show(User $user)
     {
         $rolls = Rolls::all();
-        $user = User::();
         return view('users.show',compact('user','rolls'));
     }
     public function edit(User $user)

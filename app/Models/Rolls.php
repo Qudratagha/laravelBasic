@@ -10,7 +10,7 @@ class Rolls extends Model
     use HasFactory;
 
     protected $table = "rolls";
-    protected $primaryKey = "id";
+    protected $primaryKey = "roll_id";
     public $timestamps = false;
 
     protected $fillable = [

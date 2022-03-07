@@ -12,7 +12,7 @@
                         <div class="col-md-12">
                             <dl>
                                 <dt>User ID: </dt>
-                                <dd>{{$user->id}}</dd>
+                                <dd>{{$user->user_id}}</dd>
                                 <dt>User Name: </dt>
                                 <dd>{{$user->name}}</dd>
                                 <dt>User Email: </dt>
