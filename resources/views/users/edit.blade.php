@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('mainContent')
-    <form class="form-horizontal" method="post" action="{{route('users.update',$user->id)}}">
+    <form class="form-horizontal" method="post" action="{{route('users.update',$user->user_id)}}">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -20,8 +20,8 @@
 
             @foreach($rolls as $roll)
                 <label class="checkbox-inline">
-                    <input type="checkbox"  id="roll" name="roll[]" value="{{$roll->id}}"
-                           @if(in_array($roll->id,$user->rolls->pluck('id')->toArray())) checked @endif  >
+                    <input type="checkbox"  id="roll" name="roll[]" value="{{$roll->roll_id}}"
+                           @if(in_array($roll->roll_id,$user->rolls->pluck('roll_id')->toArray())) checked @endif  >
                     {{$roll->rollName}}
                 </label>
                 <br>
